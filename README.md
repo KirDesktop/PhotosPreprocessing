@@ -1,18 +1,19 @@
 # PhotosPreprocessing
-If you are a photographer then you can faced problem when you need to manually rotate wrongly rotated photos and to delete blury photos. This solution do all work instead of you!
+If you are a photographer, then you may face a problem when you need to manually rotate wrongly rotated photos and delete blurry photos. This solution does all the work for you!
 
-My solution automatically moves blury ptohos and then rotates photos to the right angle
+My solution automatically moves blurry photos and then rotates photos to the right angle
+Approximate accuracy is 98% (for unique photos)
 
 # How to use
 
 1. Clone the repository
-2. You can delete TRAIN folder, if you don't care how model has been training
-3. Download requirement libraries as follow:
+2. You can delete the "TRAIN" folder if you don't care about how the model has been trained
+3. Download the required libraries by running the following command:
 ```
 pip install -r requirements.txt
 ```
-4. IMPORTANT: Download model from: https://drive.google.com/file/d/1GjUsPt6uMCjfQwy7GKgKaK-ojjMhKIcr/view?usp=sharing
-5. Start the program like:
+4. IMPORTANT: Download the model from: https://drive.google.com/file/d/1GjUsPt6uMCjfQwy7GKgKaK-ojjMhKIcr/view?usp=sharing
+5. Start the program as follows:
 ```
    python FolderProcess.py --folder C:\Photos\MY_FOLDER --device cpu --out C:\Good_Photos --blur C:\Bad_Photos --threshold 13 --model ./best_model_resnet50_acc99.pth', help='Location to state_dict of the model .pth
 ```
@@ -28,4 +29,7 @@ pip install -r requirements.txt
 ```
 
 ## WARNING
-If you have CUDA support on your GPU, then you should install required pytorch library version [here](https://pytorch.org/get-started/locally/)
+If you have CUDA support on your GPU, you should install the required PyTorch library version [here](https://pytorch.org/get-started/locally/)
+
+## Dataset
+The model has been trained on a dataset of 10,000 images. These images were taken from public sources and include a variety of subjects such as people, buildings, landscapes, animals, trees, forests, cars, and more.
