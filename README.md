@@ -12,16 +12,12 @@ My solution automatically moves blury ptohos and then rotates photos to the righ
    python FolderProcess.py --folder C:\Photos\MY_FOLDER --device cpu --out C:\Good_Photos --blur C:\Bad_Photos --threshold 13 --model ./best_model_resnet50_acc99.pth', help='Location to state_dict of the model .pth
 
 ## Arguments:
-
+```
    --device ("cpu" or "cuda", default="cpu"): If your GPU does not support CUDA, then choose "cpu"
-   
    --threshold (default=13): Blur threshold to determine blury images. Higher value means better quality of selection
-   
    --out: Loacation to folder where rotated and quality photos will be stored
-   
    --blur: Location to folder, where blury photos will be stored
-   
    --folder: Folder which contains yout photos to proceed
-   
    --model: Location to state_dict of the model .pth
+```
    
