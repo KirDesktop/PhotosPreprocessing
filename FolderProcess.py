@@ -19,8 +19,10 @@ QUALITY_THRESHOLD = args.threshold
 PHOTOS_PATH = str(args.folder).replace('\\', '/')
 MODEL_PATH = str(args.model).replace('\\', '/')
 
-os.makedirs(BLURY_FOLDER)
-os.makedirs(RESULT_FOLDER)
+if not os.path.exists(BLURY_FOLDER): 
+    os.makedirs(BLURY_FOLDER)
+if not os.path.exists(RESULT_FOLDER): 
+    os.makedirs(RESULT_FOLDER)
 
 device = torch.device("cuda")
 model = getmodel.get_model(MODEL_PATH)
