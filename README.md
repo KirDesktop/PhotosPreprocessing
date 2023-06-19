@@ -6,8 +6,13 @@ My solution automatically moves blury ptohos and then rotates photos to the righ
 # How to use
 
 1. Clone the repository
-2. IMPORTANT: Download model from: https://drive.google.com/file/d/1GjUsPt6uMCjfQwy7GKgKaK-ojjMhKIcr/view?usp=sharing
-3. Start the program like:
+2. You can delete TRAIN folder, if you don't care how model has been training
+3. Download requirement libraries as follow:
+```
+pip install -r requirements.txt
+```
+4. IMPORTANT: Download model from: https://drive.google.com/file/d/1GjUsPt6uMCjfQwy7GKgKaK-ojjMhKIcr/view?usp=sharing
+5. Start the program like:
 ```
    python FolderProcess.py --folder C:\Photos\MY_FOLDER --device cpu --out C:\Good_Photos --blur C:\Bad_Photos --threshold 13 --model ./best_model_resnet50_acc99.pth', help='Location to state_dict of the model .pth
 ```
@@ -21,4 +26,6 @@ My solution automatically moves blury ptohos and then rotates photos to the righ
    --folder: Folder which contains yout photos to proceed
    --model: Location to state_dict of the model .pth
 ```
-   
+
+##WARNING
+If you have CUDA support on your GPU, then you should install required pytorch library version [here](https://pytorch.org/get-started/locally/)
