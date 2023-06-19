@@ -27,5 +27,5 @@ pip install -r requirements.txt
    --model: Location to state_dict of the model .pth
 ```
 
-##WARNING
+## WARNING
 If you have CUDA support on your GPU, then you should install required pytorch library version [here](https://pytorch.org/get-started/locally/)
